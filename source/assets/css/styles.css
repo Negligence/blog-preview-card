@@ -1,0 +1,186 @@
+/* #region Defaults */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+  --ff-body: "Figtree", sans-serif;
+  --fz-1: calc(24 / 16 * 1rem);
+  --fz-2: calc(14 / 16 * 1rem);
+  --s-500: calc(40 / 16 * 1rem);
+  --s-300: calc(24 / 16 * 1rem);
+  --s-200: calc(16 / 16 * 1rem);
+  --s-150: calc(12 / 16 * 1rem);
+  --s-100: calc(8 / 16 * 1rem);
+  --s-50: calc(4 / 16 * 1rem);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:not(ul, ol, li) {
+  margin: 0;
+}
+
+body {
+  width: inherit;
+  height: inherit;
+  font-family: var(--ff-body);
+  font-optical-sizing: auto;
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  font-size: 0.6875rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  transition: 0.4s;
+  color: var(--white);
+}
+
+.attribution a:hover,
+.attribution a:visited {
+  color: var(--green);
+  text-decoration: none;
+}
+
+/* #endregion Defaults */
+/* #region Reusable CSS */
+.grid {
+  display: grid;
+}
+
+.text-preset-1 {
+  font-size: var(--fz-1);
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.text-preset-2 {
+  font-size: var(--fz-2);
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.text-preset-2-bold {
+  font-size: var(--fz-2);
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.button {
+  text-decoration: none;
+  background-color: var(--grey-700);
+  border-radius: 0.5rem;
+  color: white;
+  width: 17.4375rem;
+  height: 2.8125rem;
+  padding: var(--s-150);
+}
+
+.button:hover {
+  background-color: var(--green);
+  color: var(--grey-700);
+  transition: 0.5s;
+}
+
+/* #endregion Reusable CSS */
+/* #region Mobile 375px */
+main {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-content: center;
+  padding-inline: var(--s-300);
+  background-color: var(--grey-900);
+}
+
+.card {
+  width: 20.4375rem;
+  height: 36.1875rem;
+  border-radius: 0.75rem;
+  padding: var(--s-300);
+  gap: var(--s-300);
+  background-color: var(--grey-800);
+  color: var(--white);
+  place-items: center;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 100vmax;
+  align-self: center;
+}
+
+.name-location {
+  height: 3.8125rem;
+  gap: var(--s-50);
+}
+
+.description {
+  color: var(--green);
+}
+
+.links {
+  gap: var(--s-200);
+}
+
+/* #endregion Mobile 375px */
+/* #region Extra Small 320px */
+@media only screen and (max-width: 23.375em) {
+  .card {
+    width: 17.5rem;
+    padding: var(--s-200);
+    gap: var(--s-100);
+  }
+  .profile-pic {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 100vmax;
+    align-self: center;
+  }
+  .links {
+    gap: var(--s-150);
+  }
+  .button {
+    width: 13.6875rem;
+    height: 2.4375rem;
+    padding: var(--s-100);
+  }
+}
+/* #endregion Extra Small 320px */
+/* #region Tablet 768px */
+@media only screen and (min-width: 48em) {
+  .card {
+    width: 28.5rem;
+    height: 38.1875rem;
+    padding: var(--s-500);
+  }
+  .button {
+    width: 23.5rem;
+  }
+}
+/* #endregion Tablet 768px */
+/* #region Desktop 1440px */
+@media only screen and (min-width: 90em) {
+  .card {
+    width: 24rem;
+  }
+  .button {
+    width: 19rem;
+  }
+}
+/* #endregion Desktop 1440px */
