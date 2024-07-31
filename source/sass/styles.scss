@@ -10,13 +10,12 @@ html {
   height: 100%;
   width: 100%;
 
+  --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
-  --green: hsl(75, 94%, 57%);
-  --grey-700: hsl(0, 0%, 20%);
-  --grey-800: hsl(0, 0%, 12%);
-  --grey-900: hsl(0, 0%, 8%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
 
-  --ff-body: "Inter", sans-serif;
+  --ff-body: "Figtree", sans-serif;
 
   --fz-1: calc(24 / 16 * 1rem);
   --fz-2: calc(14 / 16 * 1rem);
