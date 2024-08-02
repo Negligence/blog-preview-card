@@ -34,8 +34,9 @@ html {
 body {
   width: inherit;
   height: inherit;
-  font-family: var(--ff-body);
   font-optical-sizing: auto;
+  font-family: var(--ff-body);
+  background-color: var(--yellow);
 }
 
 .attribution {
@@ -55,7 +56,7 @@ body {
 
 .attribution a:hover,
 .attribution a:visited {
-  color: var(--green);
+  color: var(--gray-950);
   text-decoration: none;
 }
 /* #endregion Defaults */
@@ -96,12 +97,27 @@ main {
   height: inherit;
   display: grid;
   place-content: center;
-
 }
 
 .card {
-
+  width: rem(327px);
+  height: rem(501px);
+  background-color: var(--white);
+  border-radius: rem(20px);
+  gap: var(--s-200);
+  padding: var(--s-200);
+  border: rem(1px) inset var(--gray-950);
+  box-shadow: rem(8px) rem(8px) 0 black;
+  justify-items: start;
 }
+
+.blog-image {
+  // width: 279px;
+  height: 200px;
+  border-radius: 10px;
+  justify-self: center;
+}
+
 /* #endregion Mobile 375px */
 
 /* #region Extra Small 320px */
