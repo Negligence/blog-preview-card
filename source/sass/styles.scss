@@ -21,6 +21,8 @@ html {
   --fz-2: calc(16 / 16 * 1rem);
   --fz-3: calc(14 / 16 * 1rem);
 
+  --s-500: calc(40 / 16 * 1rem);
+  --s-300: calc(24 / 16 * 1rem);
   --s-200: calc(16 / 16 * 1rem);
   --s-150: calc(12 / 16 * 1rem);
   --s-100: calc(8 / 16 * 1rem);
@@ -104,18 +106,39 @@ main {
   height: rem(501px);
   background-color: var(--white);
   border-radius: rem(20px);
-  gap: var(--s-200);
-  padding: var(--s-200);
+  gap: var(--s-300);
+  padding: var(--s-300);
   border: rem(1px) inset var(--gray-950);
   box-shadow: rem(8px) rem(8px) 0 black;
   justify-items: start;
 }
 
 .blog-image {
-  // width: 279px;
-  height: 200px;
-  border-radius: 10px;
+  width: 100%;
+  height: rem(200px);
+  border-radius: rem(10px);
   justify-self: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.content {
+  gap: var(--s-150);
+}
+
+.category {
+  display: flex;
+  column-gap: var(--s-100);
+}
+
+.category a {
+  display: inline-flex;
+  text-decoration: none;
+  background-color: var(--yellow);
+  color: var(--gray-950);
+  padding: var(--s-50) var(--s-150);
+  border-radius: var(--s-50);
+  font-size: var(--s-150);
 }
 
 /* #endregion Mobile 375px */
