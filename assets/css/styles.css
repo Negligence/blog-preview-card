@@ -127,7 +127,7 @@ main {
 }
 
 .category a {
-  display: inline-flex;
+  display: inline-block;
   text-decoration: none;
   background-color: var(--yellow);
   color: var(--gray-950);
@@ -136,10 +136,42 @@ main {
   font-size: var(--s-150);
 }
 
+.publish-date {
+  font-size: var(--s-150);
+}
+
+.title {
+  font-size: 1.25rem;
+}
+
+.description {
+  color: var(--gray-500);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  column-gap: var(--s-150);
+}
+
+.user-pic {
+  width: 2rem;
+  height: 2rem;
+}
+
 /* #endregion Mobile 375px */
 /* #region Extra Small 320px */
+@media only screen and (max-width: 23.375em) {
+  .card {
+    width: 17.5rem;
+    height: auto;
+    gap: var(--s-200);
+    padding: var(--s-200);
+  }
+  .content {
+    gap: var(--s-100);
+  }
+}
 /* #endregion Extra Small 320px */
-/* #region Tablet 768px */
-/* #endregion Tablet 768px */
 /* #region Desktop 1440px */
 /* #endregion Desktop 1440px */
