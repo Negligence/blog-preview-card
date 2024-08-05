@@ -147,6 +147,8 @@ main {
 
 .title {
   font-size: rem(20px);
+  transition: color .4s;
+
 }
 
 .description {
@@ -198,7 +200,6 @@ main {
   
   .title {
     font-size: var(--fz-1);
-    transition: color .4s;
   }
   
   .description {
