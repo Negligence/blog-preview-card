@@ -174,4 +174,39 @@ main {
 }
 /* #endregion Extra Small 320px */
 /* #region Desktop 1440px */
+@media only screen and (min-width: 90em) {
+  .card {
+    width: 24rem;
+    height: 32.625rem;
+  }
+  .blog-image {
+    width: 21rem;
+  }
+  .category a,
+  .publish-date {
+    font-size: var(--fz-3);
+  }
+  .title {
+    font-size: var(--fz-1);
+    transition: color 0.4s;
+  }
+  .description {
+    font-size: var(--fz-2);
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    column-gap: var(--s-150);
+  }
+  .user-pic {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+/* Desktop Active */
+.title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 /* #endregion Desktop 1440px */

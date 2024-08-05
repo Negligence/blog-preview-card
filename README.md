@@ -40,7 +40,6 @@ The designs were created to the following widths:
 
 - Extra Small: 320px
 - Mobile: 375px
-- Tablet: 768px
 - Desktop: 1440px
 
 ### Screenshot
@@ -51,8 +50,8 @@ The designs were created to the following widths:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/Negligence/social-links-profile)
-- Live Site URL: [Github Pages](https://negligence.github.io/social-links-profile/)
+- Solution URL: [Github Repo](https://github.com/Negligence/blog-preview-card)
+- Live Site URL: [Github Pages](https://negligence.github.io/blog-preview-card/)
 
 ## My process
 
@@ -67,11 +66,30 @@ The designs were created to the following widths:
 
 ### What I learned
 
-The included Figma file from Front End Mentor Pro really sped-up the development process
-I got to familiarize myself with the interface and found that creating selector went so much faster because of the design system.
-I previously used element selectors for my designs, but now I'm leaning more towards using reusable and well defined css classes.
-Some roadblocks for me was learning that you can't use sass functions in custom css property values.
-I was frustrated at first, but found a solution by utilizing the ```calc()``` function 
+I learned the benefit of wrapping a container on my img
+
+```html
+      <div class="blog-image grid">
+        <img src="./assets/images/illustration-article.svg" alt="Article Illustration">
+      </div>
+```
+
+In this particular design, it was needed because the resizing image itself did not reflect the design.
+I needed to set a smaller container size, added ```overflow:hidden;``` to hide the extra contents, and also add display grid to be able to set ```justify-content: center;``` to the cropped image.
+
+```css
+.blog-image {
+  width: 100%;
+  height: rem(200px);
+  border-radius: rem(10px);
+  justify-self: center;
+  justify-content: center;
+  overflow: hidden;
+}
+```
+
+I'm very happy to be able to use my mixins ```@include mobile-media-query(1440px)``` and ```@include desktop-media-query(374px)```.
+From now on this is how I'm going to create my media queries.
 
 ### Continued development
 
@@ -131,12 +149,12 @@ They take in a pixel values as an argument then converts it to em values.
 ```mobile-media-query()```
 
 ```css
-@include mobile-media-query(1150px) {
+@include mobile-media-query(1440px) {
 
 }
 ```
 ```css
-@media only screen and (min-width: 71.875em) {
+@media only screen and (min-width: 90em) {
 
 }
 ```
@@ -144,12 +162,12 @@ They take in a pixel values as an argument then converts it to em values.
 ```desktop-media-query()```
 
 ```css
-@include desktop-media-query(1150px) {
+@include desktop-media-query(374px) {
 
 }
 ```
 ```css
-@media only screen and (max-width: 71.875em) {
+@media only screen and (max-width: 23.375em) {
 
 }
 ```
